@@ -1,9 +1,5 @@
-FROM python:3.8
-
-WORKDIR /app
-COPY . .
-
-RUN pip install -r requirements.txt
-
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+# we are extending everything from tomcat:8.0 image ...
+FROM tomcat:8.5
+MAINTAINER loreand
+# COPY path-to-your-application-war path-to-webapps-in-docker-tomcat
+COPY userservice.war /usr/local/tomcat/webapps/userservice.war
