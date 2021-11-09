@@ -2,22 +2,32 @@ version: "3.7"
 
 services:
   webapp:
-    image: loreand/webapp
+    build:
+      context: ./webapp
+      dockerfile: Dockerfile
     ports:
       - 3000:3000
   movieservice:
-    image: loreand/movieservice
+    build:
+      context: ./movieservice
+      dockerfile: Dockerfile
     ports:
       - 3005:3005
   shopservice:
-    image: loreand/shopservice
+    build:
+      context: ./shopservice
+      dockerfile: Dockerfile
     ports:
       - 3006:3006
   reviewservice:
-    image: loreand/reviewservice
+    build:
+      context: ./reviewservice
+      dockerfile: Dockerfile
     ports:
       - 3007:3007
   userservice:
-    image: loreand/userservice
+    build:
+      context: ./userservice
+      dockerfile: Dockerfile
     ports:
       - 8080:8080
