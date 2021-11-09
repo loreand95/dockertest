@@ -1,6 +1,10 @@
 version: "3.7"
 
 services:
+  webapp:
+    image: loreand/webapp
+    ports:
+      - 3000:3000
   movieservice:
     image: loreand/movieservice
     ports:
