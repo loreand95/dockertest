@@ -7,39 +7,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - 80:3000
-  movieservice:
+  services:
     build:
-      context: ./movieservice
+      context: ./services
       dockerfile: Dockerfile
     ports:
-      - 3005:8080
-  shopservice:
-    build:
-      context: ./shopservice
-      dockerfile: Dockerfile
-    ports:
-      - 3006:8080
-  userservice:
-    build:
-      context: ./userservice
-      dockerfile: Dockerfile
-    ports:
-      - 3007:8080
-  reviewservice:
-    build:
-      context: ./reviewservice
-      dockerfile: Dockerfile
-    ports:
-      - 3008:8080
-  actorservice:
-    build:
-      context: ./actorservice
-      dockerfile: Dockerfile
-    ports:
-      - 3009:8080
-  payservice:
-    build:
-      context: ./payservice
-      dockerfile: Dockerfile
-    ports:
-      - 3010:8080
+      - 8080:8080
