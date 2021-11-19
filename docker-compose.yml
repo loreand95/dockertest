@@ -6,7 +6,7 @@ services:
       context: ./webapp
       dockerfile: Dockerfile
     ports:
-      - 3000:3000
+      - 80:3000
   movieservice:
     build:
       context: ./movieservice
@@ -19,15 +19,27 @@ services:
       dockerfile: Dockerfile
     ports:
       - 3006:3006
-  reviewservice:
-    build:
-      context: ./reviewservice
-      dockerfile: Dockerfile
-    ports:
-      - 3007:3007
   userservice:
     build:
       context: ./userservice
       dockerfile: Dockerfile
     ports:
-      - 8080:8080
+      - 3007:3007
+  reviewservice:
+    build:
+      context: ./reviewservice
+      dockerfile: Dockerfile
+    ports:
+      - 3008:3008
+  actorservice:
+    build:
+      context: ./actorservice
+      dockerfile: Dockerfile
+    ports:
+      - 3009:3009
+  payservice:
+    build:
+      context: ./payservice
+      dockerfile: Dockerfile
+    ports:
+      - 3010:3010
